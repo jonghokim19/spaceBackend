@@ -26,7 +26,8 @@ export default class InquireController {
             await Inquire.sequelize?.transaction(async t => {
 
                 // IP 및 기기 정보 설정
-                const ip: any = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+                const rawIp: any = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+                const ip = rawIp.startsWith('::ffff:') ? rawIp.slice(7) : rawIp;
                 const deviceType = /mobile|android|iphone|ipad|tablet/i.test(req.headers['user-agent'] || '') ? '모바일' : 'PC';
 
                 // 개인정보 수집 동의 확인
