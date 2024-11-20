@@ -31,7 +31,7 @@ const options = {
         servers: [
             {
                 url: `http://3.35.169.16:20221`,
-                description: `local`,
+                description: `aws`,
             }
         ],
     },
