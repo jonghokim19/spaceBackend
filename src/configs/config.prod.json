@@ -5,7 +5,7 @@
     "port": 20221,
     "database": {
         "connectionLimit": 10,
-        "host": "sapcedb.ctu0myk0y4px.ap-northeast-2.rds.amazonaws.com",
+        "host": "space-database.cpgu4s0w6tna.ap-southeast-2.rds.amazonaws.com",
         "port": 3306,
         "username": "admin",
         "database": "space",
