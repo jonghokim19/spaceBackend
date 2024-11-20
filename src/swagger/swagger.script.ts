@@ -30,7 +30,7 @@ const options = {
         ],
         servers: [
             {
-                url: `http://3.35.169.16:20221`,
+                url: `http://52.64.227.175:20221`,
                 description: `aws`,
             }
         ],
