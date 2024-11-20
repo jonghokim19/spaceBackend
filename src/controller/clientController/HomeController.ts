@@ -24,7 +24,8 @@ export default class HomeController {
 
                 // 방문자 정보 추출 및 저장
                 const userAgent = req.headers['user-agent'] || '';
-                const ip: any = req.ip;
+                const rawIp: any = req.ip;
+                const ip = rawIp.startsWith('::ffff:') ? rawIp.slice(7) : rawIp; // IPv4로 변환
                 const deviceType = /mobile|android|iphone|ipad|tablet/i.test(userAgent) ? '모바일' : 'PC';
 
 
