@@ -30,7 +30,7 @@ const options = {
         ],
         servers: [
             {
-                url: `http://mlbackend.duckdns.org:80`,
+                url: `http://localhost:20221`,
                 description: `local`,
             }
         ],

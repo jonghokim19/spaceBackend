@@ -41,7 +41,7 @@ const load = () => {
 
     env = _.merge(env, {
         HTTP_PORT: process.env.HTTP_PORT ? Number(process.env.HTTP_PORT) : undefined,
-        EXPRESS_PORT: process.env.EXPRESS_PORT ? Number(process.env.EXPRESS_PORT) : 20220,
+        EXPRESS_PORT: process.env.EXPRESS_PORT ? Number(process.env.EXPRESS_PORT) : 20221,
         PASSPORT_USERNAME: process.env.PASSPORT_USERNAME,
         PASSPORT_PASSWORD: process.env.PASSPORT_PASSWORD,
         PASSPORT_SESSION: Boolean(JSON.parse(process.env.PASSPORT_SESSION || 'false')),

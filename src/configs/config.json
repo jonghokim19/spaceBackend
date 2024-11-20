@@ -1,15 +1,15 @@
 {
     "app": {
-        "name": "DBMleverage"
+        "name": "sapce"
     },
-    "port": 20220,
+    "port": 20221,
     "database": {
         "connectionLimit": 10,
-        "host": "localhost",
+        "host": "sapcedb.ctu0myk0y4px.ap-northeast-2.rds.amazonaws.com",
         "port": 3306,
         "username": "admin",
-        "database": "dbmleverage",
-        "password": "1q2w3e4r!",
+        "database": "space",
+        "password": "1q2w3e4r",
         "dialect": "mysql",
         "multipleStatements": true,
         "logging": false,
@@ -21,9 +21,5 @@
             "max": 4,
             "min": 2
         }
-    },
-    "storage": {
-        "static": "/",
-        "path": "/db_upload"
     }
 }

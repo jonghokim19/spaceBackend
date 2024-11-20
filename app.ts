@@ -55,12 +55,6 @@ const launch = (): express.Express => {
     app.use(logger('[:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
     app.use(express.json({ limit: 50 * 1024 * 1024 })); // set 50m, default 100kb
     app.use(express.urlencoded({ limit: 500 * 1024 * 1024, parameterLimit: 50000, extended: true }));
-    // app.use(cors({
-    //     origin: 'http://mlbackend.duckdns.org:80',
-    //     credentials: true
-    // }));
-    //app.use(cors());
-    app.use(express.static(config.storage.static));
     app.use(bodyParser.json());
 
     app.use(session({
