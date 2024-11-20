@@ -19,6 +19,7 @@ import UserController from './src/controller/adminController/UserController'
 import errorHandler from './src/middlewares/errorHandler'
 import router from './src/routes/index'
 import { specs } from './src/swagger/swagger.script'
+import cors from 'cors';
 
 
 env.load();
