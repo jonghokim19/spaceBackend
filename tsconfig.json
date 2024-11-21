@@ -34,6 +34,7 @@
         "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */
         "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
         "typeRoots": [
+            "node_modules/@types",
             "declare"
         ], /* List of folders to include type definitions from. */
         "types": [
