@@ -35,9 +35,6 @@ const router = express.Router();
  *                lastPhone:
  *                  type: number
  *                  description: 전화번호 마지막 (숫자 4자리)
- *                content:
- *                  type: string
- *                  description: 세부 내용
  *                privacyConsent:
  *                  type: boolean
  *                  description: 개인정보 이용 및 수집 동의여부 (true or false)
