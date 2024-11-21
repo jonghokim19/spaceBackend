@@ -5,7 +5,6 @@ export default interface IInquire {
     name: string;
     locationUuid?: string;
     clientPhone?: string;
-    content?: string;
     privacyConsent: boolean;
     device: string;
     ip: string;

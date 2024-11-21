@@ -31,10 +31,6 @@ export default class Inquire extends Model<IInquire> {
     @Column({ type: DataType.STRING(11), allowNull: false })
     clientPhone: string;
 
-    @Comment('세부내용')
-    @Column({ type: DataType.TEXT })
-    content?: string;
-
     @Comment('개인정보 이용 및 수집 동의 여부')
     @Column({ type: DataType.BOOLEAN, allowNull: false })
     privacyConsent: boolean;

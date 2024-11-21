@@ -87,7 +87,6 @@ export default class InquireController {
 
                 // 메시지 전송
                 const selectedServiceNames = serviceRecords.map(service => service.name.substring(0, 2)).join(', ');
-                const content = params.content ? `\nㆍ내용: ${params.content}` : '';
 
                 const admin: any = await User.findByPk('admin');
 
@@ -105,7 +104,7 @@ export default class InquireController {
                 await messageService.sendOne({
                     to: counselorPhone,
                     from: '02-6958-5812',
-                    text: `고객(업체): ${inquire.name}\nㆍ문의: ${selectedServiceNames}${content}\nㆍ지역: ${location?.name}\nㆍ연락처: ${clientPhone}`,
+                    text: `고객(업체): ${inquire.name}\nㆍ문의: ${selectedServiceNames}\nㆍ지역: ${location?.name}\nㆍ연락처: ${clientPhone}`,
                     subject: msgSubject
                 });
 
