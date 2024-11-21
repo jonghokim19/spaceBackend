@@ -32,11 +32,11 @@ export default class HomeController {
                 console.log('==================');
                 console.log('Headers:', req.headers);
                 console.log('==================');
-                const os = /windows/i.test(userAgent) ? 'Windows' :
-                    /mac/i.test(userAgent) ? 'MacOS' :
-                        /linux/i.test(userAgent) ? 'Linux' :
-                            /android/i.test(userAgent) ? 'Android' :
-                                /iphone|ipad/i.test(userAgent) ? 'iOS' : 'Unknown';
+                const os = /android/i.test(userAgent) ? 'Android' :
+                    /iphone|ipad/i.test(userAgent) ? 'iOS' :
+                        /windows/i.test(userAgent) ? 'Windows' :
+                            /mac/i.test(userAgent) ? 'MacOS' :
+                                /linux/i.test(userAgent) ? 'Linux' : 'Unknown';
 
                 // 차단 ip조회
                 const blockIp = await BlockIp.findByPk(ip);
