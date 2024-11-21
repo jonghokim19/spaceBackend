@@ -31,6 +31,8 @@ export default class BottomInfoController {
         try {
             await BottomInfo.sequelize?.transaction(async t => {
 
+                if(role !== roleType.SYSTEM) throw new InternalError(CODE.Auth.Unauthorized, '권한이 없습니다.');
+
                 const bottomInfo = await BottomInfo.findOne({ transaction: t });
 
                 let newbottomInfo;

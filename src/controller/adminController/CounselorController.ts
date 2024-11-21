@@ -99,7 +99,7 @@ export default class CounselorController {
         try {
             await Counselor.sequelize?.transaction(async t => {
 
-                if (role !== roleType.SYSTEM) throw new InternalError(CODE.Auth.Unauthorized, '권한이 없습니다.');
+                //if (role !== roleType.SYSTEM) throw new InternalError(CODE.Auth.Unauthorized, '권한이 없습니다.');
 
                 const counselor = new Counselor(params);
 

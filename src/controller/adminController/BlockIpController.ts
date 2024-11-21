@@ -3,6 +3,7 @@ import CODE from '../../common/code';
 import response from '../../common/response';
 import BlockIp, { BlockIpAttr } from '../../models/blockIp/BlockIp';
 import InternalError from '../../common/InternalError';
+import { roleType } from '../../../common/models/user/IUser';
 
 export default class BlockIpController {
 
@@ -10,11 +11,15 @@ export default class BlockIpController {
     static blockIp = async (req: Request, res: Response) => {
 
         const params: BlockIpAttr = req.body;
+        const role = res.locals.payload?.role;
         const ipList = params.ip?.split(',').map(ip => ip.trim());
         const isUnblock = typeof params.isUnblock === 'string' ? params.isUnblock === 'true' : !!params.isUnblock;
 
         try {
             await BlockIp.sequelize?.transaction(async t => {
+
+                if(role !== roleType.SYSTEM) throw new InternalError(CODE.Auth.Unauthorized, '권한이 없습니다.');
+                
                 const result = [];
 
                 for (const ip of ipList) {
