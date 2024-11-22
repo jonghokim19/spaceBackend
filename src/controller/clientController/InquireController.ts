@@ -108,6 +108,16 @@ export default class InquireController {
                     subject: msgSubject
                 });
 
+                // counselor의 marketerPhone으로 메시지 전송
+                if (counselor?.marketerPhone) {
+                    await messageService.sendOne({
+                        to: counselor.marketerPhone,
+                        from: '02-6958-5812',
+                        text: `고객(업체): ${inquire.name}\nㆍ문의: ${selectedServiceNames}\nㆍ지역: ${location?.name}\nㆍ연락처: ${clientPhone}`,
+                        subject: msgSubject
+                    });
+                }
+
                 return response(req, res, CODE.OK, inquire);
             });
         } catch (error) {

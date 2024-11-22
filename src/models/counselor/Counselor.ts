@@ -27,6 +27,9 @@ export default class Counselor extends Model<ICounselor> {
     @Column({ type: DataType.BOOLEAN, allowNull: false, defaultValue: 1 })
     enable?: boolean;
 
+    @Column({ type: DataType.STRING(16) })
+    marketerPhone?: string;
+
     @CreatedAt
     @Column({ type: DataType.DATE, allowNull: false })
     createdAt: Date;

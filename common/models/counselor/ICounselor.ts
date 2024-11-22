@@ -4,6 +4,7 @@ export default interface ICounselor {
     phone?: string;
     order?: number;
     enable?: boolean;
+    marketerPhone?: string;
     createdAt: Date;
     updatedAt?: Date;
 };
