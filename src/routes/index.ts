@@ -4,7 +4,7 @@ import client from './client/index';
 
 const router = express.Router();
 
-router.use('/client', client);
-router.use('/admin', admin);
+router.use('/api/client', client);
+router.use('/api/admin', admin);
 
 export default router;
