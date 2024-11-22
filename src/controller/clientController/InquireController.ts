@@ -76,6 +76,10 @@ export default class InquireController {
                     transaction: t
                 });
 
+                console.log('=====================');
+                console.log(serviceRecords);
+                console.log('=====================');
+
                 if (serviceRecords.length !== servicesArray.length) throw new InternalError(CODE.NotFound, '존재하지 않은 서비스 있습니다.');
 
                 for (const service of serviceRecords) {
