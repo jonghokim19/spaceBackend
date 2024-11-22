@@ -31,7 +31,7 @@ export default class InquireController {
                 const deviceType = /mobile|android|iphone|ipad|tablet/i.test(req.headers['user-agent'] || '') ? '모바일' : 'PC';
 
                 // 개인정보 수집 동의 확인
-                if (!params.privacyConsent) throw new InternalError(CODE.BadRequest, '개인정보 이용 및 수집 동의여부를 체크해주세요');
+                //if (!params.privacyConsent) throw new InternalError(CODE.BadRequest, '개인정보 이용 및 수집 동의여부를 체크해주세요');
 
                 // 전화번호 검증 및 설정
                 validatePhoneNumber(params.firstPhone, params.middlePhone, params.lastPhone);
