@@ -56,11 +56,7 @@ const launch = (): express.Express => {
     app.use(logger('[:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
     app.use(express.json({ limit: 50 * 1024 * 1024 })); // set 50m, default 100kb
     app.use(express.urlencoded({ limit: 500 * 1024 * 1024, parameterLimit: 50000, extended: true }));
-    app.use(cors({
-        origin: "https://spacedesignx.com", // 프론트엔드 도메인
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        credentials: true, // 쿠키를 사용한다면 설정
-    }));
+    app.use(cors());
     app.use(bodyParser.json());
 
     app.use(session({
