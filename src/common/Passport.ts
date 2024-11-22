@@ -191,8 +191,8 @@ export default class Passport {
             const PATTERNS = [
                 /POST:\/admin\/token/,
                 /GET:\/admin\/token\/context/,
-                /POST:\/client/,
-                /GET:\/client/
+                /POST:\/api\/client/,
+                /GET:\/api\/client/,
             ];
 
             const method = req.method;
