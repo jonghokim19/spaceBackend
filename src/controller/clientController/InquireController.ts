@@ -93,11 +93,11 @@ export default class InquireController {
                 let counselorPhone //상담사 전화번호;
                 let msgSubject //메시지 제목;
                 if (counselor) {
-                    msgSubject = '리폼';
+                    msgSubject = '스페이스디자인';
                     counselorPhone = counselor.phone
                 } else {
                     console.log('광고주 번호로 전송'); //활성상태의 상담사가 없으면 광고주에게 전송
-                    msgSubject = '리폼(상담사 비활성)';
+                    msgSubject = '스페이스디자인(상담사 비활성)';
                     counselorPhone = admin.phone;
                 }
 
