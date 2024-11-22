@@ -25,6 +25,10 @@ export default class InquireController {
         try {
             await Inquire.sequelize?.transaction(async t => {
 
+                console.log('=====================');
+                console.log(params);
+                console.log('=====================');
+
                 // IP 및 기기 정보 설정
                 const rawIp: any = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
                 const ip = rawIp.startsWith('::ffff:') ? rawIp.slice(7) : rawIp;
