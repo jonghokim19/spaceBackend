@@ -77,7 +77,7 @@ export default class InquireController {
                 });
 
                 console.log('=====================');
-                console.log(servicesArray);
+                console.log(params.services);
                 console.log('=====================');
 
                 if (serviceRecords.length !== servicesArray.length) throw new InternalError(CODE.NotFound, '존재하지 않은 서비스 있습니다.');
