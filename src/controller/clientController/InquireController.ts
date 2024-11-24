@@ -43,8 +43,8 @@ export default class InquireController {
 
                 // 문의 한도 확인
                 const existingInquirePhone = await Inquire.count({ where: { clientPhone }, transaction: t });
-                const existingInquireIp = await Inquire.count({ where: { ip }, transaction: t });
-                if (existingInquirePhone >= 2 || existingInquireIp >= 2) {
+                //const existingInquireIp = await Inquire.count({ where: { ip }, transaction: t });
+                if (existingInquirePhone >= 2/*  || existingInquireIp >= 2 */) {
                     return response(req, res, CODE.BadRequest, '문의 한도를 초과하였습니다.');
                 }
 
